@@ -249,7 +249,7 @@ const STORIES: { headline: string; body: string }[] = [
   },
   {
     headline: "BLAST AT BANGKOK OIL SITE HURTS NINE",
-    body: "An explosion and fire at Bangchak's Phra Khanong oil facility in Bangkok injured at least nine people, three critically, and forced nearby residents to briefly evacuate. The cause is under investigation.",
+    body: "An explosion and fire at Bangchak's Phra Khanong oil depot in Bangkok injured at least nine people, three critically, and forced nearby residents to briefly evacuate. The cause is under investigation.",
   },
   {
     headline: "TWO ITALIANS KILLED IN KUWAIT STRIKE",
