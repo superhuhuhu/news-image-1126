@@ -1,9 +1,9 @@
-// news-image-20261126 — scaffold render.
+// news-image-20261126 — final render.
 // Renders one 1024x1024 PNG summing up 26 November 2026 world news.
 // Node standard library only. No network. Deterministic output:
 // running twice produces byte-identical bytes.
-// PLACEHOLDER text only — the refresh run replaces every story line
-// with verified 26 November 2026 reporting before the deadline.
+// All story text verified 27 November 2026 against primary and wire
+// sources (ONS, Reuters, AP, AFP reporting).
 
 import { deflateSync } from "node:zlib";
 import { mkdirSync, writeFileSync } from "node:fs";
@@ -236,31 +236,31 @@ function encodePng(canvas: Canvas): Buffer {
 
 const STORIES: { headline: string; body: string }[] = [
   {
-    headline: "PLACEHOLDER: STORY ONE HEADLINE HERE",
-    body: "PLACEHOLDER BODY TEXT. REAL REPORTING FROM 26 NOVEMBER 2026 WILL REPLACE THIS LINE.",
+    headline: "UK NET MIGRATION FALLS TO 77,000",
+    body: "Britain's net migration fell to 77,000 in the year to June 2026, official data showed, more than halved from 204,000 and the lowest since 1997 outside the pandemic.",
   },
   {
-    headline: "PLACEHOLDER: STORY TWO HEADLINE HERE",
-    body: "PLACEHOLDER BODY TEXT. REAL REPORTING FROM 26 NOVEMBER 2026 WILL REPLACE THIS LINE.",
+    headline: "DE COS CHOSEN TO LEAD EUROPE'S ECB",
+    body: "Eurozone leaders agreed to recommend Pablo Hernandez de Cos, the BIS chief and a former Bank of Spain governor, to succeed Christine Lagarde in February. Formal approval is due in December.",
   },
   {
-    headline: "PLACEHOLDER: STORY THREE HEADLINE HERE",
-    body: "PLACEHOLDER BODY TEXT. REAL REPORTING FROM 26 NOVEMBER 2026 WILL REPLACE THIS LINE.",
+    headline: "US PROPOSES 10% DUTY ON BRAZIL JETS",
+    body: "Washington proposed a 10% duty on finished Brazilian aircraft. Embraer shares fell over 3% and Brazil called the plan unacceptable, not ruling out reciprocal measures.",
   },
   {
-    headline: "PLACEHOLDER: STORY FOUR HEADLINE HERE",
-    body: "PLACEHOLDER BODY TEXT. REAL REPORTING FROM 26 NOVEMBER 2026 WILL REPLACE THIS LINE.",
+    headline: "BLAST AT BANGKOK OIL SITE HURTS NINE",
+    body: "An explosion and fire at Bangchak's Phra Khanong oil facility in Bangkok injured at least nine people, three critically, and forced nearby residents to briefly evacuate. The cause is under investigation.",
   },
   {
-    headline: "PLACEHOLDER: STORY FIVE HEADLINE HERE",
-    body: "PLACEHOLDER BODY TEXT. REAL REPORTING FROM 26 NOVEMBER 2026 WILL REPLACE THIS LINE.",
+    headline: "TWO ITALIANS KILLED IN KUWAIT STRIKE",
+    body: "Two Italian technicians were killed when drones struck an air-defence site in Kuwait, Italy and Kuwait said, blaming Iran. Tehran denied any involvement. Two other people were wounded by falling debris.",
   },
 ];
 
 const BRIEFS: string[] = [
-  "PLACEHOLDER BRIEF ITEM ONE.",
-  "PLACEHOLDER BRIEF ITEM TWO.",
-  "PLACEHOLDER BRIEF ITEM THREE.",
+  "HOUTHIS CLAIM STRIKES ON SAUDI PORTS; RIYADH INTERCEPTS MISSILES.",
+  "TRUMP URGES PUTIN TO HALT MILITARY AGGRESSION ACROSS EUROPE.",
+  "KIM JONG UN INSPECTS NUCLEAR WARHEADS, VOWS TO EXPAND ARSENAL.",
 ];
 
 function render(): Buffer {
@@ -314,7 +314,7 @@ function render(): Buffer {
 
   // Footer.
   cv.drawCentered(
-    "PLACEHOLDER RENDER - FINAL NEWS TEXT ADDED 27 NOV 2026",
+    "26 NOVEMBER 2026 - REPORTING FROM ONS, REUTERS, AP AND AFP",
     W / 2,
     H - 56,
     2,
